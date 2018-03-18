@@ -1,1 +1,76 @@
-<h1> Hello World! </h1>
+<h1 id="demo"> Hello World! </h1>
+  <button type="button" onclick="myFunction()">点击这里</button>
+
+
+<button type='button' onclick="alert('Welcome!')">点这里</button>
+<p id="ty"> JavaScript 能改变html元素的样式 </p>
+<input id="de" type="text">
+<button type="button" onclick="num()"> 数字验证</button>
+
+<p id="mo"> AB CA</p>
+<button type="button" onclick="ion()">点啊</button>
+
+  <script >
+
+  var x = 3;
+  var y = 2;
+  var z = x + y;
+  document.write(x + "<br>");
+  document.write(y + "<br>");
+  document.write(z + "<br>");
+
+  document.write("<h1> hello !!!!</h1>");
+  document.write("<p> world !!!.</p>");
+
+   function num(){
+     var x=document.getElementById("de").value;
+     if (x=="" || isNaN(x))
+     {
+       alert("Not Numeric");
+     }
+   }
+
+   function pe(){
+     x=document.getElementById("ty")
+     x.style.color="#ff0000";
+   }
+
+   function changeImage(){
+     element=document.getElementById('myimage')
+     if (element.src.match("04")) {
+       element.src="/05.jpg";
+     }
+     else {
+       element.src="/04.png";
+     }
+   }
+
+
+
+   function myFunction(){
+     x=document.getElementById("demo");
+     x.innerHTML="Hello JavaScript";
+   }
+    function print(name, content){
+      console.log('i am ' + name);
+      console.log('i am learnnint ' + content);
+    }
+    print('xiao','JS');
+    print("JS", 'xiao');
+
+    function sum(x,y){
+      var result = x + y;
+      return result;
+    }
+
+     var result = sum (1,3);
+     console.log(result);
+
+     document.write("<h1> This is a heading</h1>");
+     document.write("<p> This is a paragraph</p>");
+     alert('My First JavaScript')
+  </script>
+
+  <script type="text/javascript" src="/myScript.js" > </script>
+  <button type="button"  onclick="pe()"> 样式 </button>
+  <img id="myimage" onclick="changeImage()" src="/05.jpg">
